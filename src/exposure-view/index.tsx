@@ -10,9 +10,8 @@ import React, {
   forwardRef,
 } from 'react';
 import classnames from 'classnames';
-import util from './utils';
+import utils from '../utils';
 
-export { util as Utils };
 export type Direction = 'up' | 'down' | 'left' | 'right';
 export type ExposureMode = 'vertical' | 'horizontal';
 export type Observer = (change: () => void) => HTMLElement | (() => void);
@@ -184,8 +183,8 @@ const ExposureView: ForwardRefRenderFunction<
       applyTo = window;
     }
     return applyTo === window
-      ? util.getViewPortBounds()
-      : util.getBoundingClientRect(applyTo as HTMLElement);
+      ? utils.getViewPortBounds()
+      : utils.getBoundingClientRect(applyTo as HTMLElement);
   };
 
   const handleExposureChange = (state: boolean, direction: Direction) => {
@@ -218,12 +217,12 @@ const ExposureView: ForwardRefRenderFunction<
 
   const handlePosChange = () => {
     if (ctRef.current) {
-      const contentBounds = util.getBoundingClientRect(ctRef.current);
+      const contentBounds = utils.getBoundingClientRect(ctRef.current);
       const containerBounds = getContainerBounds();
 
       if (
-        util.equals(prevContentBounds, contentBounds) &&
-        util.equals(prevContainerBounds, containerBounds)
+        utils.equals(prevContentBounds, contentBounds) &&
+        utils.equals(prevContainerBounds, containerBounds)
       ) {
         return;
       }
@@ -334,13 +333,13 @@ const ExposureView: ForwardRefRenderFunction<
         }
       };
       ob = observer == null ? null : observer(handleChange);
-      if (util.isHTMLElement(ob)) {
+      if (utils.isHTMLElement(ob)) {
         ob.addEventListener('scroll', handleChange);
       }
     }
     return () => {
       if (ob) {
-        if (util.isHTMLElement(ob)) {
+        if (utils.isHTMLElement(ob)) {
           ob.removeEventListener('scroll', handleChange);
         } else if (typeof ob === 'function') {
           ob();
