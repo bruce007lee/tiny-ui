@@ -1,3 +1,3 @@
-# exposure-view
+# tiny-ui
 
-曝光区块组件
+基于react的ui通用组件库
