@@ -1,0 +1,42 @@
+{
+  "name": "tiny-ui",
+  "version": "0.1.0",
+  "description": "react通用组件库",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "doc": "typedoc --options typedoc.json",
+    "start": "build-scripts start",
+    "build": "build-scripts build",
+    "prettier": "prettier --write \"./{src,demo}/**/*.{tsx,js,jsx,json,css,ts,scss,less}\""
+  },
+  "author": "bruce007lee",
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bruce007lee/tiny-ui.git"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
+  },
+  "devDependencies": {
+    "typedoc": "~0.20.25",
+    "typedoc-plugin-markdown": "~3.5.0",
+    "@alib/build-scripts": "^0.1.0",
+    "build-plugin-component": "^1.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.7.5",
+    "@iceworks/spec": "^1.5.0"
+  }
+}
