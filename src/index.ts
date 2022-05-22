@@ -1,1 +1,1 @@
-export { default as ExposureView } from './components/exposure-view'
+export { default as ExposureView } from './components/exposure-view';
