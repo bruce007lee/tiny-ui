@@ -10,7 +10,7 @@ import React, {
   forwardRef,
 } from 'react';
 import classnames from 'classnames';
-import utils from '../utils';
+import utils from '../../utils';
 
 export type Direction = 'up' | 'down' | 'left' | 'right';
 export type ExposureMode = 'vertical' | 'horizontal';

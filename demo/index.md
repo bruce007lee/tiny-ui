@@ -1,7 +1,7 @@
 ```jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import ExposureView from '../src/exposure-view/index';
+import ExposureView from '../src/components/exposure-view/index';
 
 const headerStyle = {
   backgroundColor: '#eee',
