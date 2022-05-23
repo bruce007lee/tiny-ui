@@ -370,7 +370,7 @@ const ExposureView: ForwardRefRenderFunction<
       ref={ctRef}
       style={st}
       className={classnames(
-        'ctf-lib-exposure-view',
+        'tiny-ui-exposure-view',
         className,
         exposureState.isExposure ? exposureClassName : null
       )}
