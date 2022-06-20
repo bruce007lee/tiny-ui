@@ -1,6 +1,6 @@
 ```jsx
 import React, { useEffect, useRef, useState } from 'react';
-import StickyView from '../src/index';
+import StickyView from '../src/components/sticky-view/index';
 
 const headerStyle = {
   backgroundColor: '#eee',
